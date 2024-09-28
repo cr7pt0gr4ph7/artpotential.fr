@@ -1,16 +1,16 @@
 <footer>
   <div class="container-fluid">
     <div class="row">
-      <div class="col col-md-5">
-        {{- include.brand -}}
-        {% if include.copyright %}
-          <span class="copyright">
-            {{- include.copyright | escape_once | replace: "(c)", "&copy;" -}}
-          </span>
-        {%- endif %}
-      </div>
+      <div class="col col-md-5">{{ include.brand }}</div>
       <div class="col col-md-3">{{ include.links_primary }}</div>
       <div class="col col-md-4">{{ include.links_secondary }}</div>
+      {% if include.copyright %}
+        <div class="col col-12">
+          <span class="footer-copyright-hint">
+            {{- include.copyright | escape_once | replace: "(c)", "&copy;" -}}
+          </span>
+        </div>
+      {%- endif %}
     </div>
   </div>
 </footer>

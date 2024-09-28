@@ -1,0 +1,19 @@
+//
+// Brand Logo
+//
+
+.footer-brand {
+    img {
+        max-height: 150px;
+    }
+}
+
+//
+// Color, Fonts and Theming
+//
+
+.footer-copyright-hint {
+    color: #bbbbbb;
+    font-size: 0.8rem;
+    line-height: calc($baseline-line-height * 1rem);
+}

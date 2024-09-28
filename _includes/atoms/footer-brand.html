@@ -1,0 +1,6 @@
+<a class="footer-brand" href="{{ include.href }}">
+  {% if include.image_url %}
+    <img src="{% link {{ include.image_url }} %}" />
+  {% endif %}
+  {{ include.label | escape_once }}
+</a>
