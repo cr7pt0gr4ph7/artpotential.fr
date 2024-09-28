@@ -1,7 +1,10 @@
+// Usage: Refer to this font via "font-family: $font-kapakana"
 $kapakana-font-display: block;
+$kapakana-font-name: 'Kapakana Regular';
+$font-kapakana: $kapakana-font-name;
 
 @font-face {
-    font-family: 'Kapakana Regular';
+    font-family: $kapakana-font-name;
     font-style: normal;
     font-weight: normal;
     font-display: $kapakana-font-display;

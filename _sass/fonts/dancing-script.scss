@@ -1,8 +1,11 @@
+// Usage: Refer to this font via "font-family: $font-dancing-script"
 $dancing-script-font-display: block;
+$dancing-script-font-name: 'Dancing Script';
+$font-dancing-script: $dancing-script-font-name;
 
 /* vietnamese */
 @font-face {
-    font-family: 'Dancing Script';
+    font-family: $dancing-script-font-name;
     font-style: normal;
     font-weight: 400 700;
     font-display: $dancing-script-font-display;
@@ -12,7 +15,7 @@ $dancing-script-font-display: block;
 
 /* latin-ext */
 @font-face {
-    font-family: 'Dancing Script';
+    font-family: $dancing-script-font-name;
     font-style: normal;
     font-weight: 400 700;
     font-display: $dancing-script-font-display;
@@ -22,7 +25,7 @@ $dancing-script-font-display: block;
 
 /* latin */
 @font-face {
-    font-family: 'Dancing Script';
+    font-family: $dancing-script-font-name;
     font-style: normal;
     font-weight: 400 700;
     font-display: $dancing-script-font-display;

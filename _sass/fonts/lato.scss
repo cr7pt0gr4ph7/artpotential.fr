@@ -1,8 +1,11 @@
+// Usage: Refer to this font via "font-family: $font-lato"
 $lato-font-display: swap;
+$lato-font-name: 'Lato';
+$font-lato: $lato-font-name;
 
 /* latin-ext */
  @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 100;
     font-display: $lato-font-display;
@@ -11,7 +14,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 100;
     font-display: $lato-font-display;
@@ -20,7 +23,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 300;
     font-display: $lato-font-display;
@@ -29,7 +32,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 300;
     font-display: $lato-font-display;
@@ -38,7 +41,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 400;
     font-display: $lato-font-display;
@@ -47,7 +50,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 400;
     font-display: $lato-font-display;
@@ -56,7 +59,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 700;
     font-display: $lato-font-display;
@@ -65,7 +68,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 700;
     font-display: $lato-font-display;
@@ -74,7 +77,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 900;
     font-display: $lato-font-display;
@@ -83,7 +86,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: italic;
     font-weight: 900;
     font-display: $lato-font-display;
@@ -92,7 +95,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 100;
     font-display: $lato-font-display;
@@ -101,7 +104,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 100;
     font-display: $lato-font-display;
@@ -110,7 +113,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 300;
     font-display: $lato-font-display;
@@ -119,7 +122,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 300;
     font-display: $lato-font-display;
@@ -128,7 +131,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 400;
     font-display: $lato-font-display;
@@ -137,7 +140,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 400;
     font-display: $lato-font-display;
@@ -146,7 +149,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 700;
     font-display: $lato-font-display;
@@ -155,7 +158,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 700;
     font-display: $lato-font-display;
@@ -164,7 +167,7 @@ $lato-font-display: swap;
   }
   /* latin-ext */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 900;
     font-display: $lato-font-display;
@@ -173,7 +176,7 @@ $lato-font-display: swap;
   }
   /* latin */
   @font-face {
-    font-family: 'Lato';
+    font-family: $lato-font-name;
     font-style: normal;
     font-weight: 900;
     font-display: $lato-font-display;

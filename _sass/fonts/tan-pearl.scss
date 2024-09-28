@@ -1,7 +1,10 @@
+// Usage: Refer to this font via "font-family: $font-tan-pearl"
 $tan-pearl-font-display: block;
+$tan-pearl-font-name: 'TAN - PEARL';
+$font-tan-pearl: $tan-pearl-font-name;
 
 @font-face {
-    font-family: 'TAN - PEARL';
+    font-family: $tan-pearl-font-name;
     font-display: $tan-pearl-font-display;
     src: url(../fonts/tan-pearl/tan-pearl.woff) format('woff');
 }
