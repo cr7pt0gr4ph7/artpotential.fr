@@ -1,0 +1,15 @@
+{% if include.alternates -%}
+  {% assign in_other_languages = include.alternates -%}
+  {% assign default_language = include.default_languages -%}
+  {% assign all_languages = include.all_languages | split: " " -%}
+
+  {% for lang in all_languages -%}
+    {% if in_other_languages[lang] -%}
+      <link rel="alternate" hreflang="{{ lang }}" href="{% link {{ in_other_languages[lang] }} %}" />
+    {%- endif -%}
+  {%- endfor -%}
+
+  {% if default_language -%}
+    <link rel="alternate" hreflang="x-default" href="{% link {{ in_other_languages[default_language] }} %}" />
+  {%- endif %}
+{%- endif %}

@@ -9,6 +9,10 @@ layout: none
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="{% link icon.svg %}">
+  {% include utils/alternates.html
+    alternates=page.in_other_languages
+    default_language="fr"
+    all_languages="en fr" %}
   <link href="{% link assets/css/default.scss %}" rel="stylesheet" />
   <link href="{% link assets/css/bootstrap-icons.min.css %}" rel="stylesheet" />
   {% seo %}
