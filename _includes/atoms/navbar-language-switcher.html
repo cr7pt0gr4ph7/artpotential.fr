@@ -1,0 +1,21 @@
+{% assign current_language = page.lang %}
+{% if current_language == "en" %}
+  {% assign other_language = "fr" %}
+{% elsif current_language == "fr" %}
+  {% assign other_language = "en" %}
+{% else %}
+  {% comment %}
+    TODO:
+    The current language is neither "en" nor "fr", which can be due to either
+    a typo or due to the website being extended to more languages.
+    We should therefore probably raise an error instead of using a silent fallback.
+  {% endcomment %}
+  {% assign other_language = "fr" %}
+{% endif %}
+{% if other_language %}
+  {% if page.in_other_languages[other_language] %}
+    {% assign other_page = page.in_other_languages[other_language] %}
+    {% capture other_href %}{% link {{ other_page }} %}{% endcapture %}
+  {% endif %}
+{% endif %}
+<!-- Language Switcher: Current: {{ current_language }}, Alternate: {{ other_language }} @ {{ other_href }} -->

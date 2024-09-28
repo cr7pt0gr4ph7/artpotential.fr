@@ -1,6 +1,7 @@
 {%- assign content_id = include.content_id | default: navbarSupportedContent -%}
 <nav class="navbar navbar-expand-md {{ include.class }}">
   <div class="container-fluid">
+    {{ include.language_switcher }}
     {% if include.items  %}
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#{{ content_id }}" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
