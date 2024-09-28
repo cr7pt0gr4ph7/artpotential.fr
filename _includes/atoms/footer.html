@@ -6,9 +6,9 @@
       <div class="col col-md-4">{{ include.links_secondary }}</div>
       {% if include.copyright %}
         <div class="col col-12">
-          <span class="footer-copyright-hint">
+          <div class="footer-copyright-hint footer-copyright-hint-baseline">
             {{- include.copyright | escape_once | replace: "(c)", "&copy;" -}}
-          </span>
+          </div>
         </div>
       {%- endif %}
     </div>
