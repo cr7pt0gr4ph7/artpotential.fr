@@ -1,0 +1,3 @@
+{%- if jekyll.environment == "development" && include.text && !include.hide -%}
+  {{ include.text | escape_once | default: include.raw }}
+{%- endif -%}
