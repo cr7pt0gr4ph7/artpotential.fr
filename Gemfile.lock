@@ -16,6 +16,7 @@ GEM
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     execjs (2.7.0)
+    ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
     forwardable-extended (2.6.0)
     google-protobuf (4.28.0-x86_64-linux)
@@ -54,6 +55,7 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
+    libv8-node (18.19.0.0-x86_64-linux)
     libv8-node (18.19.0.0-x86_64-linux-musl)
     liquid (4.0.4)
     listen (3.9.0)
@@ -73,6 +75,8 @@ GEM
     rexml (3.3.7)
     rouge (4.3.0)
     safe_yaml (1.0.5)
+    sass-embedded (1.78.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.27)
     sass-embedded (1.78.0-x86_64-linux-musl)
       google-protobuf (~> 4.27)
     terminal-table (3.0.2)
@@ -81,6 +85,7 @@ GEM
     webrick (1.8.1)
 
 PLATFORMS
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
