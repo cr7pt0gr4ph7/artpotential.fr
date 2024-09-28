@@ -1,4 +1,4 @@
-FROM ruby:3.1.4-alpine3.20
+FROM ruby:3.1.6-alpine3.20
 
 ENV SETUPDIR=/setup
 WORKDIR ${SETUPDIR}
