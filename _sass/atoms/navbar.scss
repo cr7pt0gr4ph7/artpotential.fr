@@ -2,6 +2,10 @@
 // Positioning
 //
 
+/*
+    Remove the navbar from the default content flow
+    to make it float over the hero background image.
+*/
 .overlay-top {
     position: absolute;
     top: 0px;
@@ -14,6 +18,11 @@
 // Brand Logo
 //
 
+/*
+    The brand logo is positioned at the end of the navbar,
+    instead of the default location at the start of the navbar.
+    Swap around the margins so that everything looks alright again.
+*/
 .navbar {
     --bs-navbar-brand-margin-start: var(--bs-navbar-brand-margin-end, 1rem);
 }
@@ -25,5 +34,32 @@
 
     .navbar-collapse ~ & {
         margin-left: var(--bs-navbar-brand-margin-start);
+    }
+}
+
+//
+// Baseline Grid
+//
+
+/* Make the navbar fit in with the baseline grid */
+.navbar-baseline {
+    --navbar-native-height: 2em;
+    height: fill-baseline-row(var(--navbar-native-height));
+}
+
+//
+// Color, Fonts and Theming
+//
+
+/* Make the navbar fit in with the fonts & colors of the design */
+.navbar-themed {
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+
+    .nav-item {
+        font-family: $font-tan-pearl;
+        @include font-size(24px);
     }
 }
