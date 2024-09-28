@@ -1,14 +1,15 @@
 $baseline-grid-size: 110px;
 $baseline-grid-gutter: 20px;
+
+// 16px * 1.618 = 25.888px
+// (110px + 20px) / 26px = 5
+// 16px * 1.625 = 26px
 $baseline-font-size: 16px; // TODO: Take RFS scaling into account
-$baseline-line-height: 1.618;
+// $baseline-line-height: 1.618;
+$baseline-line-height: 1.625;
 
 :root {
-    // 16px * 1.618 = 25.888px
-    // (110px + 20px) / 26px = 5
-    // 16px * 1.625 = 26px
-    --bs-body-line-height: 1.618;
-    --bs-body-line-height: 1.625;
+    --bs-body-line-height: $baseline-line-height;
 }
 
 /// Return $result if $comparand is not equal to 0px, and 0px otherwise.
