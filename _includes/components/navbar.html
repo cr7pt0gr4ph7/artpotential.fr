@@ -2,7 +2,8 @@
   {% include atoms/navbar-language-switcher.html %}
 {% endcapture %}
 {% capture navbar_brand %}
-  {% include atoms/navbar-brand.html image_url="assets/svg/logo-circle.svg" %}
+  {% capture language_root_page %}pages/{{ page.lang }}/index.html{% endcapture %}
+  {% include atoms/navbar-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
 {% endcapture %}
 {% if page.lang == "en" %}
   {% capture navbar_items %}

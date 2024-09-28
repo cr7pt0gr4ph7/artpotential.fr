@@ -1,5 +1,6 @@
 {% capture footer_brand %}
-  {% include atoms/footer-brand.html image_url="assets/svg/logo-circle.svg" %}
+{% capture language_root_page %}pages/{{ page.lang }}/index.html{% endcapture %}
+{% include atoms/footer-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
 {% endcapture %}
 {% capture footer_links_primary %}
   {% include utils/placeholder.html text="Primary Links." %}

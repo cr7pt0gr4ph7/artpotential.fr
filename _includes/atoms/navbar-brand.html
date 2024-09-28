@@ -1,4 +1,4 @@
-<a class="navbar-brand" href="{{ include.href }}">
+<a class="navbar-brand" href="{% include utils/resolve.html href=include.href page=include.page %}">
   {% if include.image_url %}
     <img src="{% link {{ include.image_url }} %}" />
   {% endif %}
