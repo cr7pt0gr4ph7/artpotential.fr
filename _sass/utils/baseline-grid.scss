@@ -1,0 +1,74 @@
+$baseline-grid-size: 110px;
+$baseline-grid-gutter: 20px;
+$baseline-font-size: 16px; // TODO: Take RFS scaling into account
+$baseline-line-height: 1.618;
+
+:root {
+    // 16px * 1.618 = 25.888px
+    // (110px + 20px) / 26px = 5
+    // 16px * 1.625 = 26px
+    --bs-body-line-height: 1.618;
+    --bs-body-line-height: 1.625;
+}
+
+/// Return $result if $comparand is not equal to 0px, and 0px otherwise.
+/// (Actually returns a CSS expression that can compute this at runtime)
+@function zero-or-one($comparand, $result) {
+    @return min($result, round(up, $result, $comparand));
+}
+
+/// Given $value, return the smallest value $r that satisfies
+/// the following equations (where N is an integer between 0 and +Infinity):
+/// $r = $plus_offset + N * $multiple_of with $r >= $value if $value > 0
+/// $r = 0 if $value == 0
+@function round-up-to($v, $multiple_of, $offset) {
+    @return calc(zero-or-one($v, $offset) + round(up, max(0px, $v - $offset), $multiple_of));
+}
+
+/// Given $value, return the smallest value $r that satisfies
+/// the following equations (where N is an integer between 0 and +Infinity):
+/// $r = $include_gutter * $gutter + $size + N * ($size + $gutter) with $r >= $value if $value > 0
+/// $r = 0 if $value == 0
+@function expand-to-multiple-of-baseline($value, $size, $gutter, $include_gutter: 0) {
+    @if $include_gutter==0 or $include_gutter==none or not $include_gutter {
+        @return round-up-to($multiple_of: $size + $gutter, $offset: $size, $v: $value);
+    }
+
+    @else if $include_gutter==1 or $include_gutter==start or $include_gutter==end or $include_gutter==true {
+        @return round(up, $value, $size + $gutter);
+    }
+
+    @else if $include_gutter==2 or $include_gutter==both {
+        @return round-up-to($multiple_of: $size + $gutter, $offset: $size + 2 * $gutter, $v: $value);
+    }
+
+    @else {
+        @error "Invalid include_gutter value: #{$include_gutter} (must be one of: 0|false|none, 1|true|start|end, 2|both)";
+    }
+}
+
+@function fill-baseline-row($value, $include_gutter: none) {
+    @return expand-to-multiple-of-baseline($value, $baseline-grid-size, $baseline-grid-gutter, $include_gutter: $include_gutter);
+}
+
+@function span-baseline-rows($num_rows, $include_gutter: none) {
+    @if $include_gutter==0 or $include_gutter==none or not $include_gutter {
+        @return calc($num_rows * $baseline-grid-size + sign($num_rows) * (abs($num_rows) - 1) * $baseline-grid-gutter);
+    }
+
+    @else if $include_gutter==1 or $include_gutter==start or $include_gutter==end or $include_gutter==true {
+        @return calc($num_rows * ($baseline-grid-size + $baseline-grid-gutter));
+    }
+
+    @else if $include_gutter==2 or $include_gutter==both {
+        @return calc($num_rows * ($baseline-grid-size + $baseline-grid-gutter) + sign($num_rows) * $baseline-grid-gutter);
+    }
+
+    @else {
+        @error "Invalid include_gutter value: #{$include_gutter} (must be one of: 0|false|none, 1|true|start|end, 2|both)";
+    }
+}
+
+@function span-baseline-columns($num_columns, $include_gutter: none) {
+    @return span-baseline-rows($num_columns, $include_gutter);
+}
