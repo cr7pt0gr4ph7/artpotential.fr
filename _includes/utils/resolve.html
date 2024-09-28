@@ -1,0 +1,7 @@
+{%- if include.href -%}
+  {{- include.href -}}
+{%- elsif include.page -%}
+  {%- link {{ include.page }} -%}
+{%- else -%}
+  {{- include.default -}}
+{%- endif -%}

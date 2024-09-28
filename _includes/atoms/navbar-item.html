@@ -1,0 +1,3 @@
+<li class="nav-item">
+  <a class="nav-link{% if include.active %} active" aria-current="page"{% else %}"{% endif %} href="{% include utils/resolve.html href=include.href page=include.page %}">{{ include.label | escape_once }}</a>
+</li>

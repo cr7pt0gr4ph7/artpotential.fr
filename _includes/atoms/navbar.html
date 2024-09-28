@@ -1,0 +1,17 @@
+{%- assign content_id = include.content_id | default: navbarSupportedContent -%}
+<nav class="navbar navbar-expand-md {{ include.class }}">
+  <div class="container-fluid">
+    {% if include.items  %}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#{{ content_id }}" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="{{ content_id }}">
+        <div class="me-md-auto"></div>
+        <ul class="navbar-nav">
+          {{ include.items }}
+        </ul>
+      </div>
+    {% endif  %}
+    {{ include.brand }}
+  </div>
+</nav>
