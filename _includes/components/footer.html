@@ -1,0 +1,14 @@
+{% capture footer_brand %}
+  {% include utils/placeholder.html text="Brand Logo." %}
+{% endcapture %}
+{% capture footer_links_primary %}
+  {% include utils/placeholder.html text="Primary Links." %}
+{% endcapture %}
+{% capture footer_links_secondary %}
+  {% include utils/placeholder.html text="Secondary Links." %}
+{% endcapture %}
+{% include atoms/footer.html
+  brand=footer_brand
+  copyright=site.copyright
+  links_primary=footer_links_primary
+  links_secondary=footer_links_secondary %}
