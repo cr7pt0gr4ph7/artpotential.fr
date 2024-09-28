@@ -1,0 +1,4 @@
+/* Prevent text selection using the cursor */
+.not-selectable {
+    user-select: none;
+}
