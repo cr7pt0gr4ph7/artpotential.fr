@@ -1,0 +1,29 @@
+//
+// Positioning
+//
+
+.overlay-top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+}
+
+//
+// Brand Logo
+//
+
+.navbar {
+    --bs-navbar-brand-margin-start: var(--bs-navbar-brand-margin-end, 1rem);
+}
+
+.navbar-brand {
+    img {
+        max-height: 75px;
+    }
+
+    .navbar-collapse ~ & {
+        margin-left: var(--bs-navbar-brand-margin-start);
+    }
+}
