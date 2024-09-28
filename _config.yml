@@ -40,6 +40,18 @@ defaults:
         name: Art'Potential
         alternate_name:
           - Art'Potential - Marine Valet
+  - scope:
+      path: pages/fr/
+      type: pages
+    values:
+      lang: fr
+      locale: fr_FR
+  - scope:
+      path: pages/en/
+      type: pages
+    values:
+      lang: en
+      locale: en_US
 
 plugins:
   - jekyll-seo-tag
