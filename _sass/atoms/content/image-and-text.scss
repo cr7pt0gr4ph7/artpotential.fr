@@ -16,8 +16,6 @@ $phi: 1.61803398875;
 
     .content-image-and-text,
     .content-text-and-image {
-        background: none;
-
         &.content-baseline {
             padding-top: 0;
             padding-bottom: 0;
@@ -27,63 +25,29 @@ $phi: 1.61803398875;
                 padding-bottom: span-baseline-rows(1, start);
             }
         }
-
-        .content-container {
-            background: $background-color;
-            margin-left: $outer-left;
-            margin-right: $outer-right;
-            padding-left: $inner-left;
-            padding-right: $inner-right;
-        }
     }
 
     .content-image-and-text,
     .content-text-and-image {
-        display: flex;
-        flex-direction: row;
-
-        &::before,
-        &::after {
-            content: "";
-            background: $deep-background-color;
-            align-self: stretch;
-        }
-
-        &::before {
-            width: $outer-left;
-        }
-
-        &::after {
-            width: $outer-left;
-        }
-
-        .content-container {
-            flex-grow: 1;
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
-
-    .content-image-and-text,
-    .content-text-and-text {
         .content-container {
             display: flex;
 
             .image {
-                flex: 0 calc(75vw / $phi);
-                flex: $phi;
-                background: gray;
+                flex: 7;
+                flex: calc($phi - 1/$phi/$phi/$phi/$phi);
                 background: lightgray var(--image);
                 background-size: cover;
                 height: 570px;
             }
 
             .gap {
-                flex: 0 $spacing;
+                flex: 1;
+                flex: calc(1/$phi/$phi/$phi/$phi);
+                width: 0px;
             }
 
             .text {
-                flex: 0 calc(75vw / $phi / $phi);
+                flex: 4;
                 flex: 1;
                 background: gray;
             }
@@ -92,11 +56,6 @@ $phi: 1.61803398875;
 
     .content-text-and-image {
         .content-container {
-            margin-left: $outer-left;
-            margin-right: $outer-right;
-            padding-left: $inner-right;
-            padding-right: $spacing;
-
             .image {
                 order: 3;
             }
