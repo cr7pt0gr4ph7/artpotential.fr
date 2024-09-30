@@ -32,7 +32,8 @@ $debug-hero-layout: false !default;
 
 .hero-fill-viewport.hero-baseline {
     /* Fill the viewport */
-    height: fill-baseline-row(100lvh, end);
+    height: 100lvh;
+    margin-bottom: calc(fill-baseline-row(100lvh, end) + span-baseline-rows(1, end) - 100lvh);
     @extend %hero-smooth-height-transitions;
 }
 
