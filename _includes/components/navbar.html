@@ -1,22 +1,22 @@
 {% capture navbar_switcher %}
-  {% include atoms/navbar-language-switcher.html %}
+  {% include atoms/header/navbar-language-switcher.html %}
 {% endcapture %}
 {% capture navbar_brand %}
   {% capture language_root_page %}pages/{{ page.lang }}/index.html{% endcapture %}
-  {% include atoms/navbar-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
+  {% include atoms/header/navbar-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
 {% endcapture %}
 {% if page.lang == "en" %}
   {% capture navbar_items %}
-    {% include atoms/navbar-item.html label="Dancers" page="pages/en/dancers.html" %}
-    {% include atoms/navbar-item.html label="Athletes" page="pages/en/athletes.html" %}
+    {% include atoms/header/navbar-item.html label="Dancers" page="pages/en/dancers.html" %}
+    {% include atoms/header/navbar-item.html label="Athletes" page="pages/en/athletes.html" %}
   {% endcapture %}
 {% else %}
   {% capture navbar_items %}
-    {% include atoms/navbar-item.html label="Danseurs" page="pages/fr/danseurs.html" %}
-    {% include atoms/navbar-item.html label="Athlètes" page="pages/fr/athletes.html" %}
+    {% include atoms/header/navbar-item.html label="Danseurs" page="pages/fr/danseurs.html" %}
+    {% include atoms/header/navbar-item.html label="Athlètes" page="pages/fr/athletes.html" %}
   {% endcapture %}
 {% endif %}
-{% include atoms/navbar.html
+{% include atoms/header/navbar.html
   class="navbar-baseline navbar-themed"
   language_switcher=navbar_switcher
   brand=navbar_brand
