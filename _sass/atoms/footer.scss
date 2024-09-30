@@ -17,6 +17,10 @@
 // Baseline Grid
 //
 
+.footer {
+    margin-top: span-baseline-rows(2, end);
+}
+
 .footer-copyright-hint-baseline {
     padding-top: calc($baseline-line-height * 1rem);
     line-height: calc($baseline-line-height * 1rem);
