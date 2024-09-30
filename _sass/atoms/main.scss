@@ -3,6 +3,7 @@
 //
 
 .content-main {
+    margin-top: -2px;
     border-top: 1px solid rgb(211, 211, 211);
 }
 
@@ -10,4 +11,5 @@
     content: "";
     display: block;
     border-top: 1px solid rgb(170, 170, 170);
+    margin-bottom: 50px;
 }
