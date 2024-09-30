@@ -1,0 +1,18 @@
+<section class="hero {{ include.class }}"{% if include.image %} style="--hero-background-image: url({% link {{ include.image }} %});"{% endif %}>
+  <div class="hero-background fill-parent"></div>
+  <div class="hero-callout">
+    <div class="hero-callout-content">
+      <div class="hero-text not-selectable">
+        <div class="hero-overline-text">{{ include.overline_text | escape_once }}</div>
+        <div class="hero-main-text">{{ include.main_text | escape_once }}</div>
+      </div>
+      {% if include.action_text %}
+        <div class="hero-actions">
+          <div class="hero-button {{ include.action_class }}">
+            {{ include.action_text | escape_once }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
