@@ -1,0 +1,16 @@
+// The golden ratio Φ (phi) = (a+b)/a = a/b
+$phi: 1.61803398875;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        .col#{$infix}-golden-ratio-small {
+            flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+        }
+
+        .col#{$infix}-golden-ratio-large {
+            flex: $phi 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+        }
+    }
+}

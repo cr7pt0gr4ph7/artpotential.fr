@@ -1,8 +1,8 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col col-md-5">{{ include.brand }}</div>
-      <div class="col col-md-7">
+      <div class="col col-md-golden-ratio-small">{{ include.brand }}</div>
+      <div class="col col-md-golden-ratio-large">
         <div class="container">
           <div class="row">
             <div class="col col-md-4">{% include atoms/footer/footer-links.html links=include.links_primary %}</div>
@@ -11,13 +11,15 @@
           </div>
         </div>
       </div>
-      {% if include.copyright %}
+    </div>
+    {% if include.copyright %}
+      <div class="row">
         <div class="col col-12">
           <div class="footer-copyright-hint footer-copyright-hint-baseline">
             {{- include.copyright | escape_once | replace: "(c)", "&copy;" -}}
           </div>
         </div>
-      {%- endif %}
-    </div>
+      </div>
+    {%- endif %}
   </div>
 </footer>
