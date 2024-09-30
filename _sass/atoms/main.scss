@@ -1,0 +1,13 @@
+//
+// Color, Fonts and Theming
+//
+
+.content-main {
+    border-top: 1px solid rgb(211, 211, 211);
+}
+
+.content-main::before {
+    content: "";
+    display: block;
+    border-top: 1px solid rgb(170, 170, 170);
+}

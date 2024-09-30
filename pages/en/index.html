@@ -11,4 +11,11 @@ in_other_languages:
   fr: pages/fr/index.html
 ---
 {% include components/hero.html %}
-{% include utils/placeholder.html text="Example content here ." %}
+<main class="content-main">
+{% capture main_content_markdown %}
+# Some inspiring header
+and text below
+{% endcapture %}
+{% assign main_content = main_content_markdown | markdownify %}
+{% include atoms/content/section.html content=main_content %}
+</main>
