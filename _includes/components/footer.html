@@ -1,29 +1,29 @@
 {% capture footer_brand %}
 {% capture language_root_page %}pages/{{ page.lang }}/index.html{% endcapture %}
-{% include atoms/footer-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
+{% include atoms/footer/footer-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
 {% endcapture %}
 {% if page.lang == "en" %}
   {% capture footer_links_primary %}
-    {% include atoms/footer-link.html label="Dancers" page="pages/en/dancers.html" %}
-    {% include atoms/footer-link.html label="Athletes" page="pages/en/athletes.html" %}
+    {% include atoms/footer/footer-link.html label="Dancers" page="pages/en/dancers.html" %}
+    {% include atoms/footer/footer-link.html label="Athletes" page="pages/en/athletes.html" %}
   {% endcapture %}
   {% capture footer_links_secondary %}
-    {% include atoms/footer-link.html label="Contact" page="pages/en/common/contact.html" %}
-    {% include atoms/footer-link.html label="Privacy" page="pages/en/common/privacy.html" %}
-    {% include atoms/footer-link.html label="Imprint" page="pages/en/common/imprint.html" %}
+    {% include atoms/footer/footer-link.html label="Contact" page="pages/en/common/contact.html" %}
+    {% include atoms/footer/footer-link.html label="Privacy" page="pages/en/common/privacy.html" %}
+    {% include atoms/footer/footer-link.html label="Imprint" page="pages/en/common/imprint.html" %}
   {% endcapture %}
 {% else %}
   {% capture footer_links_primary %}
-    {% include atoms/footer-link.html label="Pour danseurs" page="pages/fr/danseurs.html" %}
-    {% include atoms/footer-link.html label="Pour athlètes" page="pages/fr/athletes.html" %}
+    {% include atoms/footer/footer-link.html label="Pour danseurs" page="pages/fr/danseurs.html" %}
+    {% include atoms/footer/footer-link.html label="Pour athlètes" page="pages/fr/athletes.html" %}
   {% endcapture %}
   {% capture footer_links_secondary %}
-    {% include atoms/footer-link.html label="Contact" page="pages/fr/common/contact.html" %}
-    {% include atoms/footer-link.html label="Protection des données" page="pages/fr/common/privacy.html" %}
-    {% include atoms/footer-link.html label="Les mentions légales" page="pages/fr/common/imprint.html" %}
+    {% include atoms/footer/footer-link.html label="Contact" page="pages/fr/common/contact.html" %}
+    {% include atoms/footer/footer-link.html label="Protection des données" page="pages/fr/common/privacy.html" %}
+    {% include atoms/footer/footer-link.html label="Les mentions légales" page="pages/fr/common/imprint.html" %}
   {% endcapture %}
 {% endif %}
-{% include atoms/footer.html
+{% include atoms/footer/footer.html
   brand=footer_brand
   copyright=site.copyright
   links_primary=footer_links_primary
