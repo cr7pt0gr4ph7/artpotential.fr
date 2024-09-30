@@ -1,0 +1,114 @@
+// The golden ratio Φ (phi) = (a+b)/a = a/b
+$phi: 1.61803398875;
+
+@at-root {
+    $base: calc(20px / 1440px * 100vw);
+
+    $outer-right: $base;
+    $outer-left: $base * 2;
+
+    $inner-left: $outer-left * 1.375;
+    $inner-right: $inner-left * 1.375;
+    $spacing: $inner-right * 1.375;
+
+    $deep-background-color: #d3d3d34f;
+    $background-color: white;
+
+    .content-image-and-text,
+    .content-text-and-image {
+        background: none;
+
+        &.content-baseline {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            .content-container {
+                padding-top: span-baseline-rows(1, end);
+                padding-bottom: span-baseline-rows(1, start);
+            }
+        }
+
+        .content-container {
+            background: $background-color;
+            margin-left: $outer-left;
+            margin-right: $outer-right;
+            padding-left: $inner-left;
+            padding-right: $inner-right;
+        }
+    }
+
+    .content-image-and-text,
+    .content-text-and-image {
+        display: flex;
+        flex-direction: row;
+
+        &::before,
+        &::after {
+            content: "";
+            background: $deep-background-color;
+            align-self: stretch;
+        }
+
+        &::before {
+            width: $outer-left;
+        }
+
+        &::after {
+            width: $outer-left;
+        }
+
+        .content-container {
+            flex-grow: 1;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .content-image-and-text,
+    .content-text-and-text {
+        .content-container {
+            display: flex;
+
+            .image {
+                flex: 0 calc(75vw / $phi);
+                flex: $phi;
+                background: gray;
+                background: lightgray var(--image);
+                background-size: cover;
+                height: 570px;
+            }
+
+            .gap {
+                flex: 0 $spacing;
+            }
+
+            .text {
+                flex: 0 calc(75vw / $phi / $phi);
+                flex: 1;
+                background: gray;
+            }
+        }
+    }
+
+    .content-text-and-image {
+        .content-container {
+            margin-left: $outer-left;
+            margin-right: $outer-right;
+            padding-left: $inner-right;
+            padding-right: $spacing;
+
+            .image {
+                order: 3;
+            }
+
+            .gap {
+                order: 2;
+                flex: 0 $inner-right;
+            }
+
+            .text {
+                order: 1;
+            }
+        }
+    }
+}

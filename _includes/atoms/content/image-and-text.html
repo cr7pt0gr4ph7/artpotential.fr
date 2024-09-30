@@ -1,0 +1,7 @@
+<section class="content-section content-baseline {% if include.reverse %}content-text-and-image{% else %}content-image-and-text{% endif %} {{ include.class }}">
+  <div class="content-container">
+    <div class="image"{% if include.image %} style="--image: url({% link {{ include.image }} %});"{% endif %}></div>
+    <div class="gap"></div>
+    <div class="text">{{ include.text }}</div>
+  </div>
+</section>
