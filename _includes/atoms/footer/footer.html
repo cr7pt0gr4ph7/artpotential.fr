@@ -2,9 +2,15 @@
   <div class="container">
     <div class="row">
       <div class="col col-md-5">{{ include.brand }}</div>
-      <div class="col col-md-2">{% include atoms/footer/footer-links.html links=include.links_primary %}</div>
-      <div class="col col-md-2">{% include atoms/footer/footer-links.html links=include.links_secondary %}</div>
-      <div class="col col-md-3">{{ include.social_links }}</div>
+      <div class="col col-md-7">
+        <div class="container">
+          <div class="row">
+            <div class="col col-md-4">{% include atoms/footer/footer-links.html links=include.links_primary %}</div>
+            <div class="col col-md-4">{% include atoms/footer/footer-links.html links=include.links_secondary %}</div>
+            <div class="col col-md-4">{{ include.social_links }}</div>
+          </div>
+        </div>
+      </div>
       {% if include.copyright %}
         <div class="col col-12">
           <div class="footer-copyright-hint footer-copyright-hint-baseline">
