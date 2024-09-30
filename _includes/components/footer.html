@@ -1,6 +1,6 @@
 {% capture footer_brand %}
-{% capture language_root_page %}pages/{{ page.lang }}/index.html{% endcapture %}
-{% include atoms/footer/footer-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
+  {% capture language_root_page %}pages/{{ page.lang }}/index.html{% endcapture %}
+  {% include atoms/footer/footer-brand.html page=language_root_page image_url="assets/svg/logo-circle.svg" %}
 {% endcapture %}
 {% if page.lang == "en" %}
   {% capture footer_links_primary %}
@@ -23,8 +23,14 @@
     {% include atoms/footer/footer-link.html label="Les mentions légales" page="pages/fr/common/imprint.html" %}
   {% endcapture %}
 {% endif %}
+{% capture footer_links_social %}
+{% include atoms/footer/footer-social-link.html class="footer-social-link-large" label="Facebook" tooltip="Find me on Facebook" icon="facebook" href="#" %}
+{% include atoms/footer/footer-social-link.html class="footer-social-link-large" label="Instagram" tooltip="Find me on Instagram" icon="instagram" href="#" %}
+{% include atoms/footer/footer-social-link.html class="footer-social-link-large" label="LinkedIn" tooltip="Find me on LinkedIn" icon="linkedin" href="#" %}
+{% endcapture %}
 {% include atoms/footer/footer.html
   brand=footer_brand
   copyright=site.copyright
   links_primary=footer_links_primary
-  links_secondary=footer_links_secondary %}
+  links_secondary=footer_links_secondary
+  social_links=footer_links_social %}
