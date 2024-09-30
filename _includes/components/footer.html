@@ -4,8 +4,8 @@
 {% endcapture %}
 {% if page.lang == "en" %}
   {% capture footer_links_primary %}
-    {% include atoms/navbar-item.html label="Dancers" page="pages/en/dancers.html" %}
-    {% include atoms/navbar-item.html label="Athletes" page="pages/en/athletes.html" %}
+    {% include atoms/footer-link.html label="Dancers" page="pages/en/dancers.html" %}
+    {% include atoms/footer-link.html label="Athletes" page="pages/en/athletes.html" %}
   {% endcapture %}
   {% capture footer_links_secondary %}
     {% include atoms/footer-link.html label="Contact" page="pages/en/common/contact.html" %}
@@ -14,8 +14,8 @@
   {% endcapture %}
 {% else %}
   {% capture footer_links_primary %}
-    {% include atoms/navbar-item.html label="Pour danseurs" page="pages/fr/danseurs.html" %}
-    {% include atoms/navbar-item.html label="Pour athlètes" page="pages/fr/athletes.html" %}
+    {% include atoms/footer-link.html label="Pour danseurs" page="pages/fr/danseurs.html" %}
+    {% include atoms/footer-link.html label="Pour athlètes" page="pages/fr/athletes.html" %}
   {% endcapture %}
   {% capture footer_links_secondary %}
     {% include atoms/footer-link.html label="Contact" page="pages/fr/common/contact.html" %}
